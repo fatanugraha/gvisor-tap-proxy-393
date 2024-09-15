@@ -1,0 +1,11 @@
+vfkit \
+	--cpus 2 --memory 2048 \
+	--bootloader efi,variable-store=efi-variable-store,create \
+	--device virtio-blk,path=ubuntu.raw \
+	--device virtio-blk,path=./ubuntu/user-data.img \
+	--device virtio-input,keyboard \
+	--device virtio-input,pointing \
+	--device virtio-gpu,width=800,height=600 \
+	--device virtio-net,unixSocketPath=/tmp/vfkit.sock,mac=5a:94:ef:e4:0c:ee \
+	--device virtio-fs,sharedDir=`pwd`,mountTag=vfkit-share \
+	--gui

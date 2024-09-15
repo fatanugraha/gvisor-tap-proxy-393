@@ -1,0 +1,6 @@
+ubuntu.img
+ubuntu.raw
+repro/repro
+capture.pcap
+efi-variable-store
+gvisor-tap-vsock
